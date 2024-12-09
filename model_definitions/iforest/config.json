@@ -1,7 +1,7 @@
 {
    "hyperParameters": {
-    "n_estimators": 30,
-    "max_samples": 300,
-    "contamination": 0.001
+        "n_estimators": 100,
+        "contamination": 0.01,
+        "random_state": 0
     }
 }
