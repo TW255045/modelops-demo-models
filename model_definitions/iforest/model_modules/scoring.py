@@ -32,7 +32,7 @@ def score(context: ModelContext, **kwargs):
     X_test = test_df.drop(['id'], axis=1)
     features_tdf = DataFrame.from_query(context.dataset_info.sql)
     features_pdf = features_tdf.to_pandas(all_rows=True)
-    test_df.set_index("id")
+    # test_df.set_index("id")
 
     print("Scoring using osml...")
     isolation_forest_model = osml.load(model_name="Isolation_Forest")
