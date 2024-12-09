@@ -28,7 +28,8 @@ def score(context: ModelContext, **kwargs):
     entity_key = context.dataset_info.entity_key
     
     test_df = DataFrame.from_query(context.dataset_info.sql)
-    X_test = test_df.drop(['id', 'species'], axis=1)
+    # X_test = test_df.drop(['id', 'species'], axis=1)
+    X_test = test_df.drop(['id'], axis=1)
     features_tdf = DataFrame.from_query(context.dataset_info.sql)
     features_pdf = features_tdf.to_pandas(all_rows=True)
     test_df.set_index("id")
